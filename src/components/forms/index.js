@@ -1,6 +1,8 @@
 import { FormNav, PageNav, SideNav } from './nav';
 import Builder from './builder';
 
+import './styles.scss';
+
 const wrapper = () => {
 
 

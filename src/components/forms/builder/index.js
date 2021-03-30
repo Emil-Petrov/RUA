@@ -1,7 +1,7 @@
 const formBuilder = () => {
 
     return (
-        <div className="flex middle center">
+        <div className="form-preview flex middle center">
             Body
         </div>
     )

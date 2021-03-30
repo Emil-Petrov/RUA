@@ -1,19 +1,25 @@
-const sideNav = () => {
+import { Button } from '../../inputs';
 
+const sideNav = () => {
 
     return (
         <div className="side-nav flex column left">
-            <div>Theme</div>
-            <div>Form</div>
-            <div>Text</div>
-            <div>Phone Field</div>
-            <div>Email Field</div>
-            <div>Name Field</div>
-            <div>Button Field</div>
-            <div>Checkbox</div>
-            <div>Close Button</div>
-            <div>Compliance</div>
-            <div>Next Form 1/4</div>
+            <div className="layout-list">
+                
+            </div>
+            <div className="design-list flex column left">
+                <Button text="Theme" />
+                <Button text="Form" />
+                <Button text="Text" />
+                <Button text="Phone Field" />
+                <Button text="Email Field" />
+                <Button text="Name Field" />
+                <Button text="Button Field" />
+                <Button text="Checkbox" />
+                <Button text="Close Button" />
+                <Button text="Compliance" />
+                <Button text="Next Form 1/4" />
+            </div>
         </div>
     )
 }

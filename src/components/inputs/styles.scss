@@ -1,0 +1,123 @@
+.button {
+    display: inline-block;
+    // padding: 1em;
+    font-weight: 500;
+    transition: all 2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:after {
+        display: block;
+        content: '';
+        border-bottom: .5px solid black;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+    }
+    &::after {
+        border-color: #5f6ec8;
+    }
+    &.active {
+        background: #5f6ec8;
+        color: white;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-weight: 500;
+        &::after {
+            border-color: white;
+        }
+    }
+}
+
+.dropdown {
+    border-radius: 5px;
+    height: 2em;
+    padding: 0 2em;
+    &:focus {
+        outline: none;
+    }
+}
+
+.icon {
+    position: relative;
+    &::before {
+        position: absolute;
+        left: -1.25em;
+    }
+    &.button-field {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Button\ Field.svg');
+        }
+    }
+    &.checkbox {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Checkbox.svg');
+        }
+    }
+    &.close-button {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Close\ Button.svg');
+        }
+    }
+    &.compliance {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Compliance.svg');
+        }
+    }
+    &.name-field {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Component\ 74\ –\ 713.svg');
+        }
+    }
+    &.email-field {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Email\ Field.svg');
+        }
+    }
+    &.form {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Form.svg');
+        }
+    }
+    &.phone-field {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Phone\ Field.svg');
+        }
+    }
+    &.text-new {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Text\ new.svg');
+        }
+    }
+    &.theme {
+        &::before {
+            content: url('../../media/Icons/Main-Icons/Theme.svg');
+        }
+    }
+    &.exit {
+        &::before {
+            content: url('../../media/Icons/Top-Menu-Icons/Exit-icon.svg');
+        }
+    }
+    &.pen {
+        &::before {
+            content: url('../../media/Icons/Top-Menu-Icons/Pen-icon.svg');
+        }
+    }
+    &.redo {
+        &::before {
+            content: url('../../media/Icons/Top-Menu-Icons/Redo-icon.svg');
+        }
+    }
+    &.trash {
+        &::before {
+            content: url('../../media/Icons/Top-Menu-Icons/trash-Icon.svg');
+        }
+    }
+    &.undo {
+        &::before {
+            content: url('../../media/Icons/Top-Menu-Icons/Undo-icon.svg');
+        }
+    }
+}

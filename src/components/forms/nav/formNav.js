@@ -1,13 +1,13 @@
 const nav = () => {
     return (
-        <div className="flex space-between">
-            <div className="flex left">
-                <div>Design</div>
-                <div>Behavior</div>
+        <div className="form-nav flex space-between">
+            <div className="steps flex space-between">
+                <div className="button active">1.Design</div>
+                <div className="button">2.Behavior</div>
             </div>
-            <div className="flex center">
-                <div>Form 1</div>
-                <div>Form 2</div>
+            <div className="flex middle center">
+                <div className="button">Form 1</div>
+                <div className="button">Success</div>
             </div>
             <div className="flex right">
                 <div>Back</div>
