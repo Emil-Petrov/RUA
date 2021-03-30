@@ -7,7 +7,7 @@ const sideNav = () => {
             <div className="layout-list">
                 
             </div>
-            <div className="design-list flex column left">
+            <div className="design-list flex wrap left">
                 <Button text="Theme" />
                 <Button text="Form" />
                 <Button text="Text" />

@@ -2,11 +2,7 @@
 
 const dropdown = ({ options, value, onChange }) => (
     <select className="dropdown" selected={value} onChange={onChange}>
-        {options.map(opt => (
-            <option value={opt.value}>
-                {opt.text}
-            </option>
-        ))}
+        {options.map(({ text, value }) => (<option key={value} value={value}>{text}</option>))}
     </select>
 )
 

@@ -1,4 +1,6 @@
 $side-basis: 12.5%;
+$active-blue: #5f6ec8;
+;
 @mixin vertical-line {
     position: absolute;
     top: 20%;
@@ -12,6 +14,7 @@ $side-basis: 12.5%;
 
 .page-nav {
     background: #fff;
+    height: 4em;
     .logo {
         position: relative;
         display: flex;
@@ -41,7 +44,6 @@ $side-basis: 12.5%;
     }
     .logout {
         flex-basis: 5.5%;
-        ;
         img {
             margin-right: .5em;
         }
@@ -53,6 +55,7 @@ $side-basis: 12.5%;
 
 .form-nav {
     background: #f4f6f8;
+    height: 3.5em;
     .steps {
         position: relative;
         display: flex;
@@ -62,22 +65,85 @@ $side-basis: 12.5%;
             @include vertical-line;
         }
         .button {
-            padding: 1.25em 1.75em;
-            font-weight: 400;
-            font-size: .95em;
-            transition: none;
+            padding: 1.25em 1.5em;
+            // flex-basis: 50%;
+            // font-size: .9em;
             flex-basis: 50%;
+            font-size: .9em;
+            // display: flex;
             &:not(.active) {
-                color: #5f6ec8;
+                font-weight: 400;
+                color: $active-blue;
             }
+        }
+    }
+    .form-actions {
+        position: relative;
+        flex-basis: calc(100% - #{$side-basis} - 8em);
+        &::after {
+            @include vertical-line;
+        }
+        .button {
+            margin: .25em;
+            padding: .5em 2.5em;
+            font-size: .85em;
+            border-radius: 5px;
+            border: 1px solid black;
+            &.active {
+                border-color: $active-blue;
+            }
+        }
+        &::before {
+            content: "";
+            width: 8em;
+            visibility: hidden;
+            margin-left: auto;
+        }
+        .history-nav {
+            width: 8em;
+            margin-left: auto;
+            padding: .5em;
+            justify-content: flex-end;
+            .button {
+                border: none;
+                padding: 0 .5em 0 0;
+            }
+            padding: .5em;
+        }
+    }
+    .delete-element {
+        flex-basis: 10em;
+        img {
+            margin-right: .5em;
+        }
+        .button {
+            padding: 0;
+            font-size: .9em;
         }
     }
 }
 
 .body {
+    height: calc(100vh - 4em - 3.5em);
     .side-nav {
         background: #fff;
         flex-basis: $side-basis;
+        min-width: 15em;
+        &::before {
+            content: "";
+            width: 8em;
+            visibility: hidden;
+            margin-left: auto;
+        }
+        .button {
+            height: 2.75em;
+            background: red;
+            margin: .25em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 100%;
+        }
         .design-list {
             align-items: start;
         }
