@@ -1,20 +1,24 @@
 .button {
-    display: inline-block;
-    // padding: 1em;
+    &-text {
+        &:hover:after {
+            transform: scaleX(1);
+        }
+        &:after {
+            display: block;
+            content: '';
+            border-bottom: .5px solid black;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+        }
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     font-weight: 500;
     transition: all 2s ease;
     box-sizing: border-box;
     cursor: pointer;
-    &:after {
-        display: block;
-        content: '';
-        border-bottom: .5px solid black;
-        transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
-    }
-    &:hover:after {
-        transform: scaleX(1);
-    }
     &::after {
         border-color: #5f6ec8;
     }
