@@ -1,4 +1,4 @@
-import Button from '../../inputs/button';
+import { Button } from '../../../inputs';
 
 const nav = () => {
     return (

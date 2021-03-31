@@ -1,0 +1,38 @@
+$thumb-margin: .5em;
+$font-size: .85em;
+$img-height: 8em;
+$thumb-height: calc(#{$thumb-margin} * 2 + #{ $font-size} + #{$img-height});
+.theme {
+    &-picker {
+        padding: .5em;
+        display: flex;
+        flex-wrap: wrap;
+        width: 20em;
+        height: 100%;
+        margin-right: auto;
+        background-color: #f7f7f7;
+        height: calc(#{$thumb-height} * 4 + 1em);
+        overflow: auto;
+        // There is probably a better way to do this...
+        position: absolute;
+        left: 0;
+        top: 4.9em;
+    }
+    &-thumb {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(50% - 1em);
+        margin: $thumb-margin;
+        cursor: pointer;
+        img {
+            height: $img-height;
+        }
+        .form-step-count {
+            font-size: $font-size;
+            .counter {
+                color: #5f6ec8;
+                font-weight: 500;
+            }
+        }
+    }
+}

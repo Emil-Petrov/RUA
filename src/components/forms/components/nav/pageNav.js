@@ -1,9 +1,7 @@
-import logo from '../../../media/SMSBump-Logo.svg'
+import { Dropdown, Button } from '../../../inputs';
 
-import Dropdown from '../../inputs/dropdown';
-import Button from '../../inputs/button';
-
-import pen from '../../../media/Icons/Top-Menu-Icons/Pen-icon.svg'
+import logo from '../../../../media/SMSBump-Logo.svg'
+import pen from '../../../../media/Icons/Top-Menu-Icons/Pen-icon.svg'
 
 const pageNav = () => (
     <div className="page-nav flex space-between">

@@ -1,5 +1,5 @@
-import { FormNav, PageNav, SideNav } from './nav';
-import Builder from './builder';
+import { FormNav, PageNav, SideNav } from './components/nav';
+import Builder from './components/builder';
 
 import FormContextProvider, { FormContext } from './context';
 

@@ -129,10 +129,12 @@ $active-blue: #5f6ec8;
         background: #fff;
         flex-basis: $side-basis;
         min-width: 15em;
+        overflow: auto;
         .layout-list {
             border-bottom: 1px solid #cccccc;
             display: flex;
             justify-content: center;
+            border-radius: 0;
             .active {
                 background-color: unset;
                 .mask-icon {
@@ -186,5 +188,6 @@ $active-blue: #5f6ec8;
     .form-preview {
         background: #9b9b9b;
         flex-basis: calc(100% - 15em);
+        position: relative;
     }
 }

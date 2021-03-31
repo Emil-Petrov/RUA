@@ -1,4 +1,4 @@
-import { Button } from '../../inputs';
+import { Button } from '../../../inputs';
 
 const sideNav = ({ activeItems, triggerMenu, changeSize }) => {
     const getIconFromName = name => {
