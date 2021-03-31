@@ -19,6 +19,7 @@ const iconPaths = {
     'desktop': require('../../media/Icons/Preview-Form-icons/Desktop.svg'),
     'tablet': require('../../media/Icons/Preview-Form-icons/Pad.svg'),
     'mobile': require('../../media/Icons/Preview-Form-icons/Phone.svg'),
+    'arrow-next': require('../../media/Icons/Arrow-NextForm-icon.svg'),
 }
 
 const button = ({ icon, useMask, text, onClick, active, className }) => {

@@ -50,7 +50,7 @@ const sideNav = ({ activeItems, triggerMenu, changeSize }) => {
             </div>
             <div className="design-list flex column">
                 {menuItems}
-                <Button active text="Next Form 1/4" />
+                <Button icon="arrow-next" active text="Next Form 1/4" />
             </div>
         </div>
     )
