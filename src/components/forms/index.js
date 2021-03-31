@@ -1,22 +1,32 @@
 import { FormNav, PageNav, SideNav } from './nav';
 import Builder from './builder';
 
+import FormContextProvider, { FormContext } from './context';
+
 import './styles.scss';
+import { useContext } from 'react';
 
-const wrapper = () => {
-
-
+const Wrapper = () => {
+    const { 
+        state, 
+        actions: {
+            changeSize,
+            triggerMenu,
+        }
+    } = useContext(FormContext);
+    console.log(state);
     return (
         <div className="form-builder">
             <PageNav />
             <FormNav />
             <div className="body flex">
-                <SideNav />
+                <SideNav activeItems={state} changeSize={changeSize} triggerMenu={triggerMenu} />
                 <Builder />
             </div>
         </div>
     )
 }
 
+const withContext = () => (<FormContextProvider>{<Wrapper />}</FormContextProvider>)
 
-export default wrapper;
+export default withContext;
