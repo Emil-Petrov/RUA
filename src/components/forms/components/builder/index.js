@@ -1,11 +1,10 @@
-// import contnt from '../../../../media/Forms-Previews/asset-1.svg'
-// import d1 from '../../../../media/Forms-Previews/d-1.svg'
-
 import ThemeSelector from '../themeSelector';
+import './styles.scss';
 
-const formBuilder = ({ content }) => (
+const formBuilder = ({ theme }) => (
     <div className="builder-content form-preview flex middle center">
         <ThemeSelector />
+        <img src={theme.preview} />
     </div>
 )
 export default formBuilder;

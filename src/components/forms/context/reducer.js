@@ -1,6 +1,7 @@
 export const initialState = {
     menu: null,
-    size: null
+    size: null,
+    theme: {},
 }
 
 export const actions = {
@@ -17,6 +18,10 @@ const reducer = (state, action) => {
         case actions.CHANGE_SIZE: {
             const { payload: { size } } = action;
             return { ...state, size };
+        }
+        case actions.SELECT_THEME: {
+            const { payload: { theme } } = action;
+            return { ...state, theme };
         }
         default: {
             return state;

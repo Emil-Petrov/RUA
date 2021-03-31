@@ -8,20 +8,23 @@ import { useContext } from 'react';
 
 const Wrapper = () => {
     const { 
-        state, 
+        state: { 
+            theme,
+            ...activeItems
+        }, 
         actions: {
             changeSize,
             triggerMenu,
         }
     } = useContext(FormContext);
-    console.log(state);
+
     return (
         <div className="form-builder">
             <PageNav />
             <FormNav />
             <div className="body flex">
-                <SideNav activeItems={state} changeSize={changeSize} triggerMenu={triggerMenu} />
-                <Builder />
+                <SideNav activeItems={activeItems} changeSize={changeSize} triggerMenu={triggerMenu} />
+                <Builder theme={theme} />
             </div>
         </div>
     )

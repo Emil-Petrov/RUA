@@ -25,14 +25,21 @@ const button = ({ icon, useMask, text, onClick, active, className }) => {
     let iconEl;
     if (icon) {
         if (useMask) {
-            console.log(iconPaths[icon].default);
+            const url = encodeURIComponent(iconPaths[icon]?.default);
             iconEl = (
-                <div className="mask-icon" style={{
-                    WebkitMaskImage: `url(${encodeURIComponent(iconPaths[icon]?.default)})`,
-                }}>
-                    <img style={{
-                        visibility: 'hidden',
-                    }} src={encodeURIComponent(iconPaths[icon]?.default)} alt="icon" />
+                <div
+                    className="mask-icon"
+                    style={{
+                        WebkitMaskImage: `url(${url})`,
+                    }}
+                >
+                    <img
+                        style={{
+                            visibility: 'hidden',
+                        }}
+                        src={encodeURIComponent(iconPaths[icon]?.default)}
+                        alt="icon"
+                    />
                 </div>
             )
         } else {
@@ -44,8 +51,9 @@ const button = ({ icon, useMask, text, onClick, active, className }) => {
         <div
             className={cn(
                 'button', {
+                'with-icon': icon,
                 active,
-                className
+                className,
             }
             )}
             role="button"

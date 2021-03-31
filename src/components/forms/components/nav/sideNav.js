@@ -4,7 +4,7 @@ const sideNav = ({ activeItems, triggerMenu, changeSize }) => {
     const getIconFromName = name => {
         return name.toLowerCase().split(' ').join('-');
     }
-    console.log(activeItems)
+
     const menuItems = [
         'Theme',
         'Form',

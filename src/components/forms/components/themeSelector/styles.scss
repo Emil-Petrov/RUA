@@ -19,6 +19,7 @@ $thumb-height: calc(#{$thumb-margin} * 2 + #{ $font-size} + #{$img-height});
         top: 4.9em;
     }
     &-thumb {
+        position: relative;
         display: flex;
         flex-direction: column;
         flex-basis: calc(50% - 1em);
@@ -32,6 +33,28 @@ $thumb-height: calc(#{$thumb-margin} * 2 + #{ $font-size} + #{$img-height});
             .counter {
                 color: #5f6ec8;
                 font-weight: 500;
+            }
+        }
+        &::before {
+            content: '';
+            transition: all .5s ease;
+            height: 1.5em;
+            visibility: hidden;
+            position: absolute;
+            top: -.75em;
+            text-align: center;
+            width: 60%;
+            left: 20%;
+            font-size: .8em;
+            border-radius: .25em;
+            padding: .25em;
+        }
+        &.selected {
+            &::before {
+                content: 'Selected';
+                visibility: visible;
+                background: #0024a8;
+                color: white;
             }
         }
     }

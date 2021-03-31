@@ -1,6 +1,5 @@
 $side-basis: 12.5%;
 $active-blue: #5f6ec8;
-;
 @mixin vertical-line {
     position: absolute;
     top: 20%;
@@ -95,18 +94,19 @@ $active-blue: #5f6ec8;
         }
         &::before {
             content: "";
-            width: 8em;
+            width: 10em;
             visibility: hidden;
             margin-left: auto;
         }
         .history-nav {
-            width: 8em;
+            width: 10em;
             margin-left: auto;
             padding: .5em;
             justify-content: flex-end;
             .button {
                 border: none;
                 padding: 0 .5em 0 0;
+                flex-basis: 50%;
             }
             padding: .5em;
         }

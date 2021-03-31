@@ -1,12 +1,17 @@
 .button {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
     font-weight: 500;
     transition: all .5s ease;
     box-sizing: border-box;
     cursor: pointer;
+    &.with-icon {
+        img {
+            padding-right: .25em;
+        }
+    }
     &::after {
         border-color: #5f6ec8;
     }
@@ -31,15 +36,17 @@
         background: #212b35;
     }
     &-text {
-        &:hover:after {
-            transform: scaleX(1);
-        }
         &:after {
             display: block;
             content: '';
             border-bottom: .5px solid black;
             transform: scaleX(0);
             transition: transform 250ms ease-in-out;
+        }
+    }
+    &:hover &-text {
+        &:after {
+            transform: scaleX(1);
         }
     }
 }

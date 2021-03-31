@@ -13,6 +13,9 @@ const FormContextProvider = ({ children }) => {
         changeSize: (size) => {
             dispatch({ type: appActions.CHANGE_SIZE, payload: { size } })
         },
+        selectTheme: (theme) => {
+            dispatch({ type: appActions.SELECT_THEME, payload: { theme }});
+        }
     }
 
     return (
