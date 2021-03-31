@@ -9,7 +9,7 @@ const sideNav = () => {
                 <Button useMask icon="tablet" />
                 <Button useMask icon="mobile" />
             </div>
-            <div className="design-list flex wrap left">
+            <div className="design-list flex column">
                 <Button icon="theme" text="Theme" />
                 <Button icon="form" text="Form" />
                 <Button icon="text" text="Text" />
@@ -20,7 +20,7 @@ const sideNav = () => {
                 <Button icon="checkbox" text="Checkbox" />
                 <Button icon="close-button" text="Close Button" />
                 <Button icon="compliance" text="Compliance" />
-                <Button text="Next Form 1/4" />
+                <Button active text="Next Form 1/4" />
             </div>
         </div>
     )

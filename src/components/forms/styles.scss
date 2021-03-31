@@ -129,12 +129,6 @@ $active-blue: #5f6ec8;
         background: #fff;
         flex-basis: $side-basis;
         min-width: 15em;
-        &::before {
-            content: "";
-            width: 8em;
-            visibility: hidden;
-            margin-left: auto;
-        }
         .layout-list {
             border-bottom: 1px solid #cccccc;
             display: flex;
@@ -144,17 +138,25 @@ $active-blue: #5f6ec8;
             }
         }
         .design-list {
-            padding: 1em 0;
+            padding-top: 1em;
             align-items: start;
+            height: 100%;
             .button {
-                flex-basis: 100%;
                 height: 2.75em;
-                // margin: .25em;
                 padding: 0 2em;
+                margin-top: .5em;
                 justify-content: flex-start;
                 align-items: center;
                 img {
                     margin-right: 1em
+                }
+                &:last-of-type {
+                    margin-top: auto;
+                    width: 100%;
+                    background-color: $active-blue;
+                    border-radius: 0;
+                    justify-content: center;
+                    // font-weight: 400;
                 }
             }
         }

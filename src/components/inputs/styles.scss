@@ -11,6 +11,15 @@
             transition: transform 250ms ease-in-out;
         }
     }
+    &:hover {
+        .mask-icon {
+            background: #5f6ec8;
+        }
+    }
+    .mask-icon {
+        mask-repeat: no-repeat;
+        background: #212b35;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
