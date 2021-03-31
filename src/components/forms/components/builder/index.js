@@ -1,10 +1,13 @@
+import cn from 'classnames';
 import ThemeSelector from '../themeSelector';
 import './styles.scss';
 
-const formBuilder = ({ theme }) => (
-    <div className="builder-content form-preview flex middle center">
-        <ThemeSelector />
-        <img src={theme.preview} />
+const formBuilder = ({ theme, activeMenu, size }) => (
+    <div className="builder-wrapper">
+        <div className={cn("form-preview flex middle center", size)}>
+            {activeMenu === 'theme' && <ThemeSelector />}
+            {theme && <img src={theme.preview} />}
+        </div>
     </div>
 )
 export default formBuilder;

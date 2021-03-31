@@ -1,6 +1,27 @@
-.builder-content {
-    >img {
-        height: 25em;
-        image-rendering: crisp-edges;
+.builder {
+    &-wrapper {
+        flex-basis: calc(100% - 15em);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: #e4e4e4;
+        .form-preview {
+            background: #9b9b9b;
+            height: 100%;
+            transition: flex-basis .5s ease;
+            >img {
+                height: 25em;
+                image-rendering: crisp-edges;
+            }
+            &.desktop {
+                flex-basis: 100%;
+            }
+            &.tablet {
+                flex-basis: 70%;
+            }
+            &.mobile {
+                flex-basis: 50%;
+            }
+        }
     }
 }

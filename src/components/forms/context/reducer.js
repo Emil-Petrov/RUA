@@ -1,7 +1,7 @@
 export const initialState = {
     menu: null,
-    size: null,
-    theme: {},
+    size: 'desktop',
+    theme: null,
 }
 
 export const actions = {
@@ -13,6 +13,9 @@ const reducer = (state, action) => {
     switch (action.type) {
         case actions.ACTIVATE_MENU: {
             const { payload: { menu } } = action;
+
+            if (state.menu === menu) return { ...state, menu: null }
+            
             return { ...state, menu, };
         }
         case actions.CHANGE_SIZE: {

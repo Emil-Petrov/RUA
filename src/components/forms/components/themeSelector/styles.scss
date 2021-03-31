@@ -17,6 +17,25 @@ $thumb-height: calc(#{$thumb-margin} * 2 + #{ $font-size} + #{$img-height});
         position: absolute;
         left: 0;
         top: 4.9em;
+        &::-webkit-scrollbar {
+            width: .4em;
+            margin-right: .2em;
+            background-color: darkgray;
+            box-shadow: inset 0 0 9px 5px #c7c7c7;
+        }
+        &::-webkit-scrollbar-thumb {
+            border: .3em solid black;
+            border-radius: 1em;
+        }
+        &-item {
+            display: flex;
+            box-sizing: border-box;
+            margin-right: .4em;
+            span {
+                border-bottom: 1px solid black;
+                padding-right: .2em;
+            }
+        }
     }
     &-thumb {
         position: relative;

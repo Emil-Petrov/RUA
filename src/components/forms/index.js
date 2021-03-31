@@ -24,7 +24,7 @@ const Wrapper = () => {
             <FormNav />
             <div className="body flex">
                 <SideNav activeItems={activeItems} changeSize={changeSize} triggerMenu={triggerMenu} />
-                <Builder theme={theme} />
+                <Builder activeMenu={activeItems.menu} theme={theme} size={activeItems.size} />
             </div>
         </div>
     )
