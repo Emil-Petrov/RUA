@@ -8,7 +8,6 @@ const nav = () => {
                 <Button text="2.Behavior" />
             </div>
             <div className="flex form-actions middle center">
-
                 <Button active={true} text="Form 1" />
                 <Button text="Success" />
                 <div className="flex history-nav space-between">
