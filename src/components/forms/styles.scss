@@ -133,6 +133,12 @@ $active-blue: #5f6ec8;
             border-bottom: 1px solid #cccccc;
             display: flex;
             justify-content: center;
+            .active {
+                background-color: unset;
+                .mask-icon {
+                    background-color: $active-blue;
+                }
+            }
             .button {
                 padding: 1em 1.5em;
             }
