@@ -147,6 +147,22 @@ $active-blue: #5f6ec8;
                 margin-top: .5em;
                 justify-content: flex-start;
                 align-items: center;
+                width: 100%;
+                border: 4px solid transparent;
+                &:not(:last-of-type):hover {
+                    .button-text::after {
+                        border-color: $active-blue;
+                    }
+                    color: $active-blue;
+                }
+                &.active:not(:last-of-type) {
+                    background: #f7f7f7;
+                    color: $active-blue;
+                    border-left-color: $active-blue;
+                    .mask-icon {
+                        background: $active-blue;
+                    }
+                }
                 img {
                     margin-right: 1em
                 }
